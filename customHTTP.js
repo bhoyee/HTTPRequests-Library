@@ -24,7 +24,7 @@ customHTTP.prototype.get = function(url, callback) {
     let sef = this;
 
     this.onload = function() {
-        if(self.http.status === 2000) {
+        if(self.http.status === 200) {
             callback(null, self.http.responseText);
            //console.log(null, self.http.responseText);
         } else {
@@ -75,7 +75,7 @@ customHTTP.prototype.delete = function(url, callback) {
     let sef = this;
 
     this.onload = function() {
-        if(self.http.status === 2000) {
+        if(self.http.status === 200) {
             callback(null, 'Post Deleted');
            //console.log(null, self.http.responseText);
         } else {
